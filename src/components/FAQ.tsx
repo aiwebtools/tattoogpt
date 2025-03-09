@@ -65,7 +65,7 @@ const FAQ: React.FC = () => {
           {faqs.map((faq, index) => (
             <Animate key={index} type="fade-in" delay={index * 50}>
               <Card 
-                className={`mb-4 transition-all duration-300 cursor-pointer ${
+                className={`mb-4 transition-all duration-300 ${
                   openIndex === index ? "border-tattoo-cyan" : "border-white/10"
                 }`}
                 onClick={() => toggleFaq(index)}
@@ -78,6 +78,7 @@ const FAQ: React.FC = () => {
                         ? "bg-tattoo-cyan/20 text-tattoo-cyan" 
                         : "bg-tattoo-dark/50 text-gray-400"
                     }`}
+                    aria-label={openIndex === index ? "Close answer" : "Show answer"}
                   >
                     {openIndex === index ? (
                       <Minus className="h-5 w-5" />

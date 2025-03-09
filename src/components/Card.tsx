@@ -7,6 +7,7 @@ interface CardProps {
   glassEffect?: boolean;
   neonBorder?: "none" | "neon" | "cyan" | "purple";
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -14,6 +15,7 @@ const Card: React.FC<CardProps> = ({
   glassEffect = false,
   neonBorder = "none",
   children,
+  onClick,
 }) => {
   const neonStyles = {
     none: "",
@@ -28,8 +30,10 @@ const Card: React.FC<CardProps> = ({
         "rounded-xl border p-6",
         glassEffect ? "glass-card" : "bg-tattoo-dark",
         neonStyles[neonBorder],
+        onClick && "cursor-pointer",
         className
       )}
+      onClick={onClick}
     >
       {children}
     </div>
