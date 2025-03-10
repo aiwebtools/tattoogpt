@@ -1,5 +1,5 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
@@ -7,11 +7,20 @@ import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import Disclaimer from "../components/Disclaimer";
 import Footer from "../components/Footer";
+import ConsentPopup from "../components/ConsentPopup";
 
 const Index = () => {
+  const [showConsentPopup, setShowConsentPopup] = useState(false);
+  
   useEffect(() => {
     // Update page title
     document.title = "TattooGPT - AI Tattoo & Piercing Assistant";
+    
+    // Check if consent has been given
+    const hasConsent = localStorage.getItem("tattooGptConsent") === "accepted";
+    if (!hasConsent) {
+      setShowConsentPopup(true);
+    }
     
     // Smooth scroll for anchor links
     const handleAnchorClick = (e: MouseEvent) => {
@@ -45,8 +54,13 @@ const Index = () => {
     };
   }, []);
 
+  const handleConsentAccept = () => {
+    setShowConsentPopup(false);
+  };
+
   return (
     <div className="min-h-screen bg-tattoo-darker text-white">
+      {showConsentPopup && <ConsentPopup onAccept={handleConsentAccept} />}
       <Navbar />
       <main>
         <Hero />
