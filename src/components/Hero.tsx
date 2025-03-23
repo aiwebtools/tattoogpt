@@ -3,6 +3,7 @@ import React from "react";
 import Button from "./Button";
 import Animate from "./Animate";
 import { ArrowRight, Paintbrush, Building, Syringe, Heart } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Hero: React.FC = () => {
   return (
@@ -91,16 +92,16 @@ const Hero: React.FC = () => {
               <div className="relative">
                 <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-tattoo-neon via-tattoo-purple to-tattoo-cyan opacity-70 blur-lg"></div>
                 <div className="relative overflow-hidden rounded-xl border border-white/10">
-                  <div className="aspect-video w-full">
+                  <AspectRatio ratio={16 / 9} className="w-full">
                     <iframe 
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                      src="https://www.youtube.com/embed/3dtGbNqXdPY?autoplay=1&mute=0&controls=1&showinfo=0&rel=0&modestbranding=1&vq=hd1080" 
                       title="TattooGPT Demo Video"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     ></iframe>
-                  </div>
+                  </AspectRatio>
                 </div>
               </div>
             </Animate>
