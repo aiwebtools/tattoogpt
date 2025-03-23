@@ -91,12 +91,16 @@ const Hero: React.FC = () => {
               <div className="relative">
                 <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-tattoo-neon via-tattoo-purple to-tattoo-cyan opacity-70 blur-lg"></div>
                 <div className="relative overflow-hidden rounded-xl border border-white/10">
-                  <img 
-                    src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-photo-of-a-tattoo-machine-with-the-tex_8oj_X.png/:/cr=t:5.43%25,l:0%25,w:100%25,h:89.13%25/rs=w:1200,h:600,cg:true" 
-                    alt="TattooGPT" 
-                    className="w-full h-auto"
-                    loading="lazy"
-                  />
+                  <div className="aspect-video w-full">
+                    <iframe 
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                      title="TattooGPT Demo Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </Animate>
