@@ -48,78 +48,232 @@
   
   body {
     @apply bg-tattoo-darker text-foreground antialiased;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233beeab' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background: linear-gradient(135deg, #080814 0%, #0a0a1a 25%, #0c0c20 50%, #080814 75%, #060610 100%);
+    background-size: 400% 400%;
+    animation: mysticalBackground 20s ease infinite;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(255, 56, 100, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(59, 238, 171, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(147, 112, 219, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+    animation: etherealGlow 15s ease-in-out infinite alternate;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233beeab' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 56, 100, 0.02) 2px,
+        rgba(255, 56, 100, 0.02) 4px
+      );
+    pointer-events: none;
+    z-index: -1;
+    animation: patternShift 30s linear infinite;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight;
+    text-shadow: 0 0 30px rgba(255, 56, 100, 0.3);
   }
   
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
   
   h2 {
-    @apply text-3xl sm:text-4xl;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
   }
   
   h3 {
-    @apply text-2xl sm:text-3xl;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    line-height: 1.3;
+  }
+}
+
+@keyframes mysticalBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes etherealGlow {
+  0% {
+    opacity: 0.5;
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+@keyframes patternShift {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(60px) translateY(60px);
   }
 }
 
 @layer components {
   .glass-card {
-    @apply backdrop-blur-lg bg-white/5 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)];
+    @apply backdrop-blur-xl bg-white/5 border border-white/20;
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 60px rgba(255, 56, 100, 0.1);
   }
   
   .neo-blur {
-    @apply backdrop-blur-2xl bg-black/40 border border-white/10;
+    @apply backdrop-blur-3xl bg-black/50 border border-white/20;
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
   }
   
   .text-gradient {
-    @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-white via-white/95 to-white/80 bg-clip-text text-transparent;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
   }
   
   .text-gradient-neon {
-    @apply bg-gradient-to-br from-tattoo-neon via-tattoo-neon/90 to-tattoo-neon/70 bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-tattoo-neon via-pink-400 to-red-400 bg-clip-text text-transparent;
+    filter: drop-shadow(0 0 25px rgba(255, 56, 100, 0.5));
+    animation: textPulse 3s ease-in-out infinite;
   }
   
   .text-gradient-cyan {
-    @apply bg-gradient-to-br from-tattoo-cyan via-tattoo-cyan/90 to-tattoo-cyan/70 bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-tattoo-cyan via-emerald-400 to-teal-400 bg-clip-text text-transparent;
+    filter: drop-shadow(0 0 25px rgba(59, 238, 171, 0.5));
   }
   
   .text-gradient-purple {
-    @apply bg-gradient-to-br from-tattoo-purple via-tattoo-purple/90 to-tattoo-purple/70 bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-tattoo-purple via-violet-400 to-purple-400 bg-clip-text text-transparent;
+    filter: drop-shadow(0 0 25px rgba(147, 112, 219, 0.5));
   }
   
   .hover-neon {
-    @apply transition-all duration-300 hover:text-tattoo-neon hover:shadow-neon;
+    @apply transition-all duration-500 hover:text-tattoo-neon;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-neon:hover {
+    text-shadow: 
+      0 0 10px rgba(255, 56, 100, 0.8),
+      0 0 20px rgba(255, 56, 100, 0.6),
+      0 0 30px rgba(255, 56, 100, 0.4);
+    transform: translateY(-2px);
   }
   
   .hover-cyan {
-    @apply transition-all duration-300 hover:text-tattoo-cyan hover:shadow-neon-cyan;
+    @apply transition-all duration-500 hover:text-tattoo-cyan;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-cyan:hover {
+    text-shadow: 
+      0 0 10px rgba(59, 238, 171, 0.8),
+      0 0 20px rgba(59, 238, 171, 0.6),
+      0 0 30px rgba(59, 238, 171, 0.4);
+    transform: translateY(-2px);
   }
   
   .hover-scale {
-    @apply transition-transform duration-200 hover:scale-105;
+    @apply transition-all duration-300 hover:scale-105;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-scale:hover {
+    filter: drop-shadow(0 10px 30px rgba(255, 56, 100, 0.3));
   }
 
   .clip-path-slant {
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   }
+
+  .container {
+    @apply mx-auto px-6 sm:px-8 lg:px-12 xl:px-16;
+    max-width: 1400px;
+  }
+
+  section {
+    @apply py-20 sm:py-24 lg:py-32 xl:py-40;
+  }
+
+  .space-y-8 > * + * {
+    margin-top: 2.5rem;
+  }
+
+  .space-y-12 > * + * {
+    margin-top: 3.5rem;
+  }
+
+  .space-y-16 > * + * {
+    margin-top: 4.5rem;
+  }
 }
 
-/* Custom scrollbar */
+@keyframes textPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 25px rgba(255, 56, 100, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(255, 56, 100, 0.8));
+  }
+}
+
+/* Enhanced scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
 }
 
 ::-webkit-scrollbar-track {
   @apply bg-tattoo-dark;
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-tattoo-neon/40 rounded-full hover:bg-tattoo-neon/60 transition-colors;
+  background: linear-gradient(45deg, rgba(255, 56, 100, 0.6), rgba(59, 238, 171, 0.6));
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, rgba(255, 56, 100, 0.8), rgba(59, 238, 171, 0.8));
+  box-shadow: 0 0 20px rgba(255, 56, 100, 0.4);
 }

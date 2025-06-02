@@ -7,33 +7,38 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 z-0 bg-cyber-grid bg-[length:50px_50px]"></div>
-      <div className="absolute top-20 left-0 w-full h-[500px] bg-gradient-radial from-tattoo-neon/10 via-transparent to-transparent opacity-60"></div>
+    <section className="relative pt-40 pb-32 overflow-hidden min-h-screen flex items-center">
+      {/* Enhanced Background elements */}
+      <div className="absolute inset-0 z-0 bg-cyber-grid bg-[length:80px_80px] opacity-40"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-mystical-gradient opacity-30 animate-aurora"></div>
+      <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-radial from-tattoo-neon/20 via-transparent to-transparent opacity-80 blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-radial from-tattoo-cyan/15 via-transparent to-transparent opacity-70 blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-tattoo-purple/10 via-transparent to-transparent opacity-60 blur-3xl animate-glow"></div>
       
       <div className="container relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
-          <div className="w-full lg:w-1/2 space-y-8">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 xl:gap-32">
+          <div className="w-full lg:w-1/2 space-y-12 lg:space-y-16">
             <Animate type="fade-in">
-              <div className="flex flex-col space-y-4">
-                <span className="bg-tattoo-dark text-tattoo-neon px-4 py-1 rounded-full w-fit text-sm font-medium uppercase tracking-wider border border-tattoo-neon/30">
-                  AI-Powered Tattoo Assistant
-                </span>
-                <h1 className="text-gradient font-extrabold leading-tight">
+              <div className="flex flex-col space-y-8">
+                <div className="relative">
+                  <span className="bg-tattoo-dark/80 text-tattoo-neon px-6 py-3 rounded-full w-fit text-sm font-medium uppercase tracking-wider border border-tattoo-neon/40 backdrop-blur-xl shadow-neon animate-pulse-neon">
+                    AI-Powered Tattoo Assistant
+                  </span>
+                </div>
+                <h1 className="text-gradient font-extrabold leading-tight tracking-tight">
                   Your Ultimate Tattoo & Piercing AI Assistant
                 </h1>
               </div>
             </Animate>
             
             <Animate type="fade-in" delay={200}>
-              <p className="text-lg text-gray-300">
+              <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed font-light">
                 TattooGPT brings AI-powered precision to tattoo design, business planning, piercing guidance, and aftercare - elevating the entire tattoo experience from concept to healing.
               </p>
             </Animate>
             
             <Animate type="fade-in" delay={400}>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-6 lg:gap-8">
                 <a 
                   href="https://chatgpt.com/g/g-67cdd292ce2c8191a1274951c4dd950c-tattoo-gpt"
                   target="_blank"
@@ -43,14 +48,14 @@ const Hero: React.FC = () => {
                     variant="neon" 
                     size="lg" 
                     glowing 
-                    className="group"
+                    className="group text-lg px-8 py-4 lg:px-12 lg:py-6"
                   >
                     USE TATTOO GPT NOW
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2" />
                   </Button>
                 </a>
                 <a href="#features">
-                  <Button variant="outline" size="lg">
+                  <Button variant="outline" size="lg" className="text-lg px-8 py-4 lg:px-12 lg:py-6">
                     Explore Features
                   </Button>
                 </a>
@@ -58,30 +63,30 @@ const Hero: React.FC = () => {
             </Animate>
             
             <Animate type="fade-in" delay={600}>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-tattoo-neon/10 flex items-center justify-center mb-2">
-                    <Paintbrush className="h-6 w-6 text-tattoo-neon" />
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-12 pt-12 lg:pt-16">
+                <div className="flex flex-col items-center text-center group hover-scale">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-tattoo-neon/10 flex items-center justify-center mb-4 shadow-neon group-hover:shadow-neon-strong transition-all duration-500">
+                    <Paintbrush className="h-8 w-8 lg:h-10 lg:w-10 text-tattoo-neon" />
                   </div>
-                  <span className="text-sm text-gray-300">Tattoo Design</span>
+                  <span className="text-base lg:text-lg text-gray-300 font-medium">Tattoo Design</span>
                 </div>
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-tattoo-cyan/10 flex items-center justify-center mb-2">
-                    <Building className="h-6 w-6 text-tattoo-cyan" />
+                <div className="flex flex-col items-center text-center group hover-scale">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-tattoo-cyan/10 flex items-center justify-center mb-4 shadow-neon-cyan group-hover:shadow-neon-strong transition-all duration-500">
+                    <Building className="h-8 w-8 lg:h-10 lg:w-10 text-tattoo-cyan" />
                   </div>
-                  <span className="text-sm text-gray-300">Business Planning</span>
+                  <span className="text-base lg:text-lg text-gray-300 font-medium">Business Planning</span>
                 </div>
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-tattoo-purple/10 flex items-center justify-center mb-2">
-                    <Syringe className="h-6 w-6 text-tattoo-purple" />
+                <div className="flex flex-col items-center text-center group hover-scale">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-tattoo-purple/10 flex items-center justify-center mb-4 shadow-neon-purple group-hover:shadow-neon-strong transition-all duration-500">
+                    <Syringe className="h-8 w-8 lg:h-10 lg:w-10 text-tattoo-purple" />
                   </div>
-                  <span className="text-sm text-gray-300">Piercing Guide</span>
+                  <span className="text-base lg:text-lg text-gray-300 font-medium">Piercing Guide</span>
                 </div>
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-tattoo-accent/10 flex items-center justify-center mb-2">
-                    <Heart className="h-6 w-6 text-tattoo-accent" />
+                <div className="flex flex-col items-center text-center group hover-scale">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-tattoo-accent/10 flex items-center justify-center mb-4 shadow-neon group-hover:shadow-neon-strong transition-all duration-500">
+                    <Heart className="h-8 w-8 lg:h-10 lg:w-10 text-tattoo-accent" />
                   </div>
-                  <span className="text-sm text-gray-300">Aftercare</span>
+                  <span className="text-base lg:text-lg text-gray-300 font-medium">Aftercare</span>
                 </div>
               </div>
             </Animate>
@@ -90,8 +95,8 @@ const Hero: React.FC = () => {
           <div className="w-full lg:w-1/2">
             <Animate type="slide-left">
               <div className="relative">
-                <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-tattoo-neon via-tattoo-purple to-tattoo-cyan opacity-70 blur-lg"></div>
-                <div className="relative overflow-hidden rounded-xl border border-white/10">
+                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-tattoo-neon via-tattoo-purple to-tattoo-cyan opacity-75 blur-2xl animate-mystical-glow"></div>
+                <div className="relative overflow-hidden rounded-2xl border border-white/20 shadow-mystical">
                   <AspectRatio ratio={16 / 9} className="w-full">
                     <iframe 
                       className="w-full h-full"

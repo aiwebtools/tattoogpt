@@ -9,7 +9,18 @@ const Footer: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-tattoo-neon/50 to-transparent"></div>
       
       <div className="container pt-16">
-        {/* Image Section (Added) */}
+        {/* Small Disclaimer */}
+        <div className="mb-12">
+          <Animate type="fade-in">
+            <div className="text-center max-w-4xl mx-auto">
+              <p className="text-sm text-gray-400 bg-tattoo-darker/50 backdrop-blur-sm border border-white/10 rounded-lg px-6 py-3">
+                <strong>Disclaimer:</strong> This website and TattooGPT are for informational, educational, and research purposes only. Not intended as professional medical, legal, or business advice.
+              </p>
+            </div>
+          </Animate>
+        </div>
+
+        {/* Image Section */}
         <div className="mb-16">
           <Animate type="fade-in">
             <div className="relative mx-auto max-w-4xl">
@@ -76,7 +87,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services" 
+                  href="https://aiwebtools.lovable.app/disclaimers" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover-cyan flex items-center"
