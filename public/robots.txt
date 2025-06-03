@@ -1,0 +1,11 @@
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://tattoогpt.aiwebtools.ai/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
