@@ -14,12 +14,12 @@ const Index = () => {
   
   useEffect(() => {
     // Update page title for SEO
-    document.title = "AI Web Tools - TattooGPT | Best AI Tools for Tattoo Design & Business Planning";
+    document.title = "TattooGPT - AI Tattoo Design Tool | Best AI Tattoo Generator & Piercing Guide";
     
     // Add meta description for SEO
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Discover the best AI web tools at AIWebTools.AI. TattooGPT - Your ultimate AI-powered tattoo design, piercing guidance, and business planning assistant. Free AI tools for professionals and enthusiasts.');
+      metaDescription.setAttribute('content', 'TattooGPT - The ultimate AI tattoo design generator. Create custom tattoo designs, get piercing guidance, tattoo business planning, and aftercare advice. Free AI tattoo tool for artists and enthusiasts.');
     }
     
     // Check if consent has been given
@@ -68,12 +68,28 @@ const Index = () => {
     <div className="min-h-screen bg-tattoo-darker text-white">
       {showConsentPopup && <ConsentPopup onAccept={handleConsentAccept} />}
       
-      {/* SEO Hidden Content for Better Indexing */}
+      {/* SEO Hidden Content for Better Indexing - Tattoo Market Focused */}
       <div className="sr-only">
-        <h1>AI Web Tools - Best AI Tools Collection</h1>
-        <p>AIWebTools.AI offers the most comprehensive collection of AI tools including TattooGPT for tattoo design, piercing guidance, and business planning. Discover free AI tools that revolutionize your creative and business processes.</p>
-        <h2>TattooGPT - AI Tattoo Design Tool</h2>
-        <p>Professional AI-powered tattoo design generator and piercing guidance system. Create custom tattoo designs, get piercing advice, and plan your tattoo business with artificial intelligence.</p>
+        <h1>TattooGPT - AI Tattoo Design Generator and Complete Tattoo Assistant</h1>
+        <p>TattooGPT is the ultimate AI-powered tattoo design generator that creates custom tattoo designs, provides piercing guidance, tattoo business planning, and comprehensive aftercare instructions. Perfect for tattoo artists, tattoo enthusiasts, piercing professionals, and tattoo shop owners.</p>
+        
+        <h2>AI Tattoo Design Generator - Create Custom Tattoo Designs</h2>
+        <p>Generate unique tattoo designs with our advanced AI tattoo generator. Create custom tattoo art for any style including traditional, realistic, minimalist, tribal, geometric, watercolor, and blackwork tattoos. Perfect for tattoo sleeves, small tattoos, and large pieces.</p>
+        
+        <h2>Piercing Guide and Safety Information</h2>
+        <p>Professional piercing guidance covering ear piercings, nose piercings, lip piercings, body piercings, and facial piercings. Get expert advice on piercing aftercare, jewelry selection, and safety protocols.</p>
+        
+        <h2>Tattoo Business Planning and Shop Management</h2>
+        <p>Comprehensive tattoo business planning tools for opening and managing tattoo shops. Includes financial planning, equipment recommendations, legal compliance, marketing strategies, and customer management systems.</p>
+        
+        <h2>Tattoo Aftercare and Healing Instructions</h2>
+        <p>Personalized tattoo aftercare instructions based on tattoo size, placement, and skin type. Learn proper tattoo healing techniques, recommended aftercare products, and troubleshooting for common tattoo healing issues.</p>
+        
+        <h3>Popular Tattoo Styles and Designs</h3>
+        <p>Explore tattoo ideas for traditional tattoos, realistic tattoos, minimalist tattoos, geometric tattoos, tribal tattoos, watercolor tattoos, blackwork tattoos, fine line tattoos, and custom tattoo designs. Get inspiration for tattoo sleeves, back pieces, chest tattoos, arm tattoos, leg tattoos, and small delicate tattoos.</p>
+        
+        <h3>Tattoo Industry Keywords</h3>
+        <p>Tattoo artist tools, tattoo machine recommendations, tattoo ink selection, tattoo stencils, tattoo flash art, tattoo portfolio development, tattoo apprenticeship guidance, tattoo convention preparation, tattoo licensing requirements, tattoo health and safety standards, sterilization protocols, cross-contamination prevention.</p>
       </div>
       
       <Navbar />

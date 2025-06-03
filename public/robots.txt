@@ -9,3 +9,18 @@ Sitemap: https://tattoогpt.aiwebtools.ai/sitemap.xml
 
 # Crawl-delay for better server performance
 Crawl-delay: 1
+
+# Allow all tattoo and piercing related content
+Allow: /#features
+Allow: /#testimonials
+Allow: /#faq
+Allow: /#disclaimer
+
+# Encourage indexing of tattoo design content
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
