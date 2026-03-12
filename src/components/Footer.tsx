@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-bold text-white">More</h4>
             <div>
               <a 
-                href="https://www.aiwebtools.ai" 
+                href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-3 bg-gradient-to-r from-tattoo-cyan to-tattoo-purple rounded-full text-white font-medium hover:from-tattoo-purple hover:to-tattoo-cyan transition-all duration-300"
