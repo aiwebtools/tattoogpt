@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li>
                 <a 
-                  href="https://www.aiwebtools.ai" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover-cyan flex items-center"
@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-bold text-white">More</h4>
             <div>
               <a 
-                href="https://www.aiwebtools.ai" 
+                href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-3 bg-gradient-to-r from-tattoo-cyan to-tattoo-purple rounded-full text-white font-medium hover:from-tattoo-purple hover:to-tattoo-cyan transition-all duration-300"
@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-16 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-500 text-sm">
-            © 2025 <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover-neon">AI WEB TOOLS LLC</a> All rights reserved.
+            © 2025 <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover-neon">AI WEB TOOLS LLC</a> All rights reserved.
           </p>
           <p className="text-gray-600 text-xs mt-2">
             Made with <Heart className="h-3 w-3 inline text-tattoo-neon" /> by AI Web Tools
