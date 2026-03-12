@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
           <div className="font-bold text-xl md:text-2xl">
             <span className="text-gradient-neon">TattooGPT</span>
             <div className="text-xs text-muted-foreground">
-              Presented by <a href="http://www.aiwebtools.ai" className="hover-neon">AiWebTools.Ai</a>
+              Presented by <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover-neon">AiWebTools.Ai</a>
             </div>
           </div>
         </a>
