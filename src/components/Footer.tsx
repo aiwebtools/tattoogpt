@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-16 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-500 text-sm">
-            © 2025 <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover-neon">AI WEB TOOLS LLC</a> All rights reserved.
+            © 2025 <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover-neon">AI WEB TOOLS LLC</a> All rights reserved.
           </p>
           <p className="text-gray-600 text-xs mt-2">
             Made with <Heart className="h-3 w-3 inline text-tattoo-neon" /> by AI Web Tools
