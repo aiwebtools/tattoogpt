@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
             Disclaimer
           </a>
           <a 
-            href="http://www.aiwebtools.ai" 
+            href="https://aiwebtools.lovable.app/?via=aiwebtools" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-white hover-neon"
